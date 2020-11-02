@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.flash {
+  background-color: green;
+  width: 300px;
+  height: 300px;
+  border: 5px rgb(44, 3, 3);
+  perspective: 1000px;
+}
