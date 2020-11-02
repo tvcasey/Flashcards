@@ -1,8 +1,8 @@
-.App {
+/*.Flash {
   text-align: center;
-}
+}*/
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,11 +35,45 @@
   to {
     transform: rotate(360deg);
   }
-}
-.flash {
+}*/
+.Flash {
   background-color: green;
-  width: 300px;
-  height: 300px;
-  border: 5px rgb(44, 3, 3);
+  width: 20%;
+  height: 20vh;
+  border: 100px rgb(44, 3, 3);
   perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Flop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: 1.5s;
+  transform-style: preserve-3d;
+}
+.Flash:hover .Flop {
+  transform: rotateY(180deg);
+}
+.Front, .Back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.Front {
+  background-color: red;
+  color: black;
+  /*transform: rotateY(180deg);*/
+}
+.Back {
+  background-color: dodgerblue;
+  color: black;
+  transform: rotateY(180deg);
 }

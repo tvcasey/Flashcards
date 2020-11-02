@@ -40,12 +40,12 @@ class App extends React.Component {
             
                 vocabulary.push(
                     <div>
-                        <p>
+                        {/*<p>
                             {collection.cards[0].word}
                         </p>
                         <p>
                             {collection.cards[0].definition}
-                        </p>
+                        </p>*/}
                         {/*<p>
                             {wordsmith.cards[i].word}
                             {wordsmith.cards[i].definition}
@@ -77,14 +77,19 @@ class App extends React.Component {
             
             return (
 
-                <div className="flash">
-                    <div className="flip">
-                        <div className="front">
-                            {/*{this.state.vocabulary.cards[0].word}*/}
-                        <div className="back">    
-                            {this.state.currentCard.collection.cards[0].definition}  
-                            {vocabulary}
-                        </div>
+                <div className="Flash">
+                    <div className="Flip">
+                        <div className="Flop">
+                            <figure className="Front">
+                                {collection.cards[0].word}
+                            
+                                {/*{this.state.vocabulary.cards[0].word}*/}
+                            </figure>
+                            <figure className="Back">
+                                {collection.cards[0].definition}
+                                {/*{this.state.currentCard.collection.cards[0].definition}*/}  
+                                {vocabulary}
+                            </figure>
                         </div>
                     </div>
                 </div>);
