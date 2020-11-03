@@ -32,7 +32,7 @@ class App extends React.Component {
         //    let wordsmith = this.state.cards[this.state.currentCollection+1];
         //    let dynamite = this.state.cards[this.state.currentCollection+2];
             let vocabulary = [];
-            for(let i = 0;i < 1; i++){
+            for(let i = 0;i < collection.cards.length; i++){
         //    for(let i = 1;i < wordsmith.cards.length; i++) {
         //    for(let i = 0;i <= dynamite.cards.length; i++) {
 
@@ -73,26 +73,33 @@ class App extends React.Component {
                     </div>
                 );
 
-                }    
+
             
             return (
 
                 <div className="Flash">
                     <div className="Flip">
                         <div className="Flop">
-                            <figure className="Front">
-                                {collection.cards[0].word}
+                            <card className="Front">
+                                {collection.cards[i].word}
                             
                                 {/*{this.state.vocabulary.cards[0].word}*/}
-                            </figure>
-                            <figure className="Back">
-                                {collection.cards[0].definition}
+                            </card>
+                            <card className="Back">
+                                {/*{collection.cards[0].definition}*/}
+                                {collection.cards[i].definition}
+
                                 {/*{this.state.currentCard.collection.cards[0].definition}*/}  
-                                {vocabulary}
-                            </figure>
+                                {/*{this.state.vocabulary(collection.cards.definition)}*/}
+                            </card>       
                         </div>
+                    <div className="ChangeCollections">
+                    <button onClick={collection.cards[i].word}>Advance A Card</button>
+                    </div>
                     </div>
                 </div>);
-    }
-}
+                
+                        
+            }
+}}
 export default App;
