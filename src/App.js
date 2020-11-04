@@ -3,6 +3,8 @@ import './App.css';
 import React from 'react';
 import axios from 'axios';
 import Bridgehead from './components/Bridgehead';
+import Flank from './components/Flank';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -61,7 +63,7 @@ class App extends React.Component {
             let vocabulary = [];
             for(let i = 0;i < collection.cards.length; i++){
         //    for(let i = 1;i < wordsmith.cards.length; i++) {
-        //    for(let i = 0;i <= dynamite.cards.length; i++) {
+        //    for(let i = 0;i <= dynamite.cards.length; i++) {        
                 vocabulary.push(
                     <div>
                         
@@ -70,6 +72,8 @@ class App extends React.Component {
             return (
             <div className="More">
                 <Bridgehead/>
+            <div className="Blitz">
+                <Flank/>
                 
                 <div className="Flash">
                     <div className="Flip">
@@ -82,12 +86,13 @@ class App extends React.Component {
                             </figure>       
                         </div>
                     <div className="ChangeCollections">
-                    <button onClick={() => this.forward()}><h3>Card: {collection.cards[card].word}</h3></button>
+                    <button onClick={() => this.forward()}><h3>Card: {collection.cards[card].word} {this.state.currentCard+1} </h3></button>
                     <button onClick={() => this.backward()}><h3>Card Go Back:</h3></button>
                     <button onClick={() => this.collectionForward()}><h3>Collection: {collection.title}</h3></button>
                     <button onClick={() => this.collectionBackward()}><h3>Collection Go Back: </h3></button>
                     </div>
                     </div>
+                </div>
                 </div>
             </div>);
                 
