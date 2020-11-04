@@ -3,7 +3,7 @@
     height: 50px;
     right: 0px;
     bottom: 0px;
-
+    margin: 20px 20px 20px 20px;
 }
 .Tab {
     width: 50px;
@@ -11,4 +11,19 @@
     right: 0px;
     bottom: 0px;
 
+
+}
+.Trial {
+    margin: 20px 20px 20px 20px;
+}
+.WordText {
+    margin: 20px 20px 20px 20px;
+    left: 50px;
+    display: absolute;
+
+}
+.DefinitionText {
+    margin: 20px 20px 20px 20px;
+    left: 50px;
+    display: absolute;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './comp.css';
 
 
 class Bridgehead extends React.Component {
@@ -35,24 +36,24 @@ class Bridgehead extends React.Component {
     render() {
         const { word, definition } = this.state
         return (
-            <div>
+            <div newClass="Trial">
                 <form onSubmit={this.submitHandler}>
                    
-                    <div>
+                    <div className="WordText">
                         <input
                          type="text"
                          name="word"
                          value={word}
                          onChange={this.changeHandler}/>
                     </div>
-                    <div>
+                    <div className="DefinitionText">
                         <input
                          type="text"
                          name="definition"
                          value={definition}
                          onChange={this.changeHandler}/>
                     </div>
-                    <button type="Submit">Create React Vocabulary</button>
+                    <button type="Submit">Create Vocab Word in React Collection</button>
                 </form>
             </div>
         )

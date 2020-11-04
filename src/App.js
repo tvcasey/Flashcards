@@ -88,7 +88,7 @@ class App extends React.Component {
                     <div className="ChangeCollections">
                     <button onClick={() => this.forward()}><h3>Card: {collection.cards[card].word} {this.state.currentCard+1} </h3></button>
                     <button onClick={() => this.backward()}><h3>Card Go Back:</h3></button>
-                    <button onClick={() => this.collectionForward()}><h3>Collection: {collection.title}</h3></button>
+                    <button onClick={() => this.collectionForward()}><h3>Collection: {collection.title} {this.state.currentCollection+1}</h3></button>
                     <button onClick={() => this.collectionBackward()}><h3>Collection Go Back: </h3></button>
                     </div>
                     </div>
