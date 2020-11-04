@@ -2,7 +2,7 @@
 import './App.css';
 import React from 'react';
 import axios from 'axios';
-
+import Bridgehead from './components/Bridgehead';
 
 class App extends React.Component {
     constructor(props) {
@@ -68,25 +68,28 @@ class App extends React.Component {
                     </div>
                 );
             return (
-
+            <div className="More">
+                <Bridgehead/>
+                
                 <div className="Flash">
                     <div className="Flip">
                         <div className="Flop">
-                            <card className="Front">
+                            <figure className="Front">
                                 {collection.cards[card].word}
-                            </card>
-                            <card className="Back">
+                            </figure>
+                            <figure className="Back">
                                 {collection.cards[card].definition}
-                            </card>       
+                            </figure>       
                         </div>
                     <div className="ChangeCollections">
-                    <button onClick={() => this.forward()}>Advance A Card</button>
-                    <button onClick={() => this.backward()}>Go Back A Card</button>
-                    <button onClick={() => this.collectionForward()}>Collection Forward</button>
-                    <button onClick={() => this.collectionBackward()}>Collection Backward</button>
+                    <button onClick={() => this.forward()}><h3>Card: {collection.cards[card].word}</h3></button>
+                    <button onClick={() => this.backward()}><h3>Card Go Back:</h3></button>
+                    <button onClick={() => this.collectionForward()}><h3>Collection: {collection.title}</h3></button>
+                    <button onClick={() => this.collectionBackward()}><h3>Collection Go Back: </h3></button>
                     </div>
                     </div>
-                </div>);
+                </div>
+            </div>);
                 
             }    
             }
